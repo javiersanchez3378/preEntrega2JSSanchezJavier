@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-commerce de Indumentaria Deportiva Esquina Libertad</title>
+    <script defer src="js/main.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+
+<body class="bg-gray-100 text-gray-800">
+    <header class="bg-blue-600 text-white p-4 flex justify-between items-center">
+        <h1 class="text-2xl font-bold">Tienda Deportiva Esquina Libertad</h1>
+        <nav>
+            <ul class="flex gap-4">
+                <li><a href="#" class="hover:underline">Inicio</a></li>
+                <li><a href="#" class="hover:underline">Productos</a></li>
+                <li><a href="#" class="hover:underline">Carrito</a></li>
+                <li><a href="#" class="hover:underline">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="p-4">
+        <!-- Filtro de categorías -->
+        <div class="mb-4 flex items-center">
+            <label for="filter-category" class="mr-2 font-bold text-gray-800">Filtrar por categoría:</label>
+            <select id="filter-category" class="bg-gray-200 px-4 py-2 rounded">
+                <option value="all">Todas</option>
+                <option value="ropa">Ropa</option>
+                <option value="accesorios">Accesorios</option>
+            </select>
+        </div>
+    
+        <!-- Lista de productos -->
+        <section id="product-list" class="grid grid-cols-1 md:grid-cols-3 gap-4">
+            <!-- Productos generados dinámicamente con JavaScript -->
+        </section>
+    
+        <!-- Carrito -->
+        <aside class="mt-6 p-4 bg-white shadow-lg rounded-lg">
+            <h2 class="text-xl font-bold">Carrito de Compras</h2>
+            <div id="cart-items" class="mt-4">
+                <!-- Items del carrito -->
+            </div>
+            <p id="total" class="mt-4 font-bold">Total: $0</p>
+            <button id="checkout" class="bg-blue-500 text-white px-4 py-2 rounded mt-4">Finalizar Compra</button>
+        </aside>
+    </main>
+    
+    <footer class="bg-blue-600 text-white p-4 text-center">
+        &copy; 2024 Tienda Deportiva Esquina Libertad
+    </footer>
+</body>
+</html>
