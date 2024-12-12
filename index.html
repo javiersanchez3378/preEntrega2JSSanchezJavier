@@ -4,51 +4,89 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>E-commerce de Indumentaria Deportiva Esquina Libertad</title>
-    <script defer src="js/main.js"></script>
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="style/style.css">
 </head>
-
 <body class="bg-gray-100 text-gray-800">
+    <!-- Header y Navegación -->
     <header class="bg-blue-600 text-white p-4 flex justify-between items-center">
         <h1 class="text-2xl font-bold">Tienda Deportiva Esquina Libertad</h1>
         <nav>
             <ul class="flex gap-4">
-                <li><a href="#" class="hover:underline">Inicio</a></li>
-                <li><a href="#" class="hover:underline">Productos</a></li>
-                <li><a href="#" class="hover:underline">Carrito</a></li>
-                <li><a href="#" class="hover:underline">Contacto</a></li>
+                <li><a href="#inicio" class="hover:underline">Inicio</a></li>
+                <li><a href="#productos" class="hover:underline">Productos</a></li>
+                <li class="relative">
+                    <!-- Ícono del carrito -->
+                    <a href="#carrito" class="hover:underline">
+                        <i class="fas fa-shopping-cart text-xl"></i>
+                    </a>
+                    <!-- Contador de productos -->
+                    <span id="cart-count" 
+                    class="absolute top-0 right-0 bg-red-500 text-white text-xs font-bold rounded-full w-5 h-5 flex items-center justify-center">
+                    0
+                    </span>
+                </li>
+                <li><a href="#contacto" class="hover:underline">Contacto</a></li>
             </ul>
         </nav>
     </header>
+
+    <!-- Contenido principal -->
     <main class="p-4">
-        <!-- Filtro de categorías -->
-        <div class="mb-4 flex items-center">
-            <label for="filter-category" class="mr-2 font-bold text-gray-800">Filtrar por categoría:</label>
-            <select id="filter-category" class="bg-gray-200 px-4 py-2 rounded">
-                <option value="all">Todas</option>
-                <option value="ropa">Ropa</option>
-                <option value="accesorios">Accesorios</option>
-            </select>
-        </div>
-    
-        <!-- Lista de productos -->
-        <section id="product-list" class="grid grid-cols-1 md:grid-cols-3 gap-4">
-            <!-- Productos generados dinámicamente con JavaScript -->
+        <!-- Sección Inicio -->
+        <section id="inicio" class="mb-8">
+            <h2 class="text-2xl font-bold">Bienvenidos a Esquina Libertad</h2>
+            <p class="text-gray-700">Aquí encontrarás todo lo que necesitas para practicar tu deporte favorito.</p>
         </section>
-    
-        <!-- Carrito -->
-        <aside class="mt-6 p-4 bg-white shadow-lg rounded-lg">
-            <h2 class="text-xl font-bold">Carrito de Compras</h2>
+
+        <!-- Sección Productos -->
+        <section id="productos" class="mb-8">
+            <h2 class="text-2xl font-bold mb-4">Nuestros Productos</h2>
+            
+            <!-- Filtro de categorías -->
+            <div class="mb-4 flex items-center">
+                <label for="filter-category" class="mr-2 font-bold text-gray-800">Filtrar por categoría:</label>
+                <select id="filter-category" class="bg-gray-200 px-4 py-2 rounded">
+                    <option value="all">Todas</option>
+                    <option value="ropa">Ropa</option>
+                    <option value="accesorios">Accesorios</option>
+                </select>
+            </div>
+
+            <!-- Lista de productos -->
+            <div id="product-list" class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                <!-- Productos generados dinámicamente con JavaScript -->
+            </div>
+        </section>
+
+        <!-- Sección Carrito -->
+        <aside id="carrito" class="mt-6 p-4 bg-gray-100 shadow-lg rounded-lg">
+            <h2 class="text-xl font-bold mb-4 text-blue-600">Carrito de Compras</h2>
             <div id="cart-items" class="mt-4">
                 <!-- Items del carrito -->
             </div>
-            <p id="total" class="mt-4 font-bold">Total: $0</p>
-            <button id="checkout" class="bg-blue-500 text-white px-4 py-2 rounded mt-4">Finalizar Compra</button>
+            <p id="total" class="mt-4 text-blue-700 font-bold text-lg">Total: $0</p>
+            <button id="checkout" class="bg-blue-600 text-white px-4 py-2 rounded mt-4 hover:bg-blue-700">
+                Finalizar Compra
+            </button>
+            <div id="mensaje" class="text-center my-4"></div> <!-- Nuevo elemento para mensajes -->
         </aside>
+
+        <!-- Sección Contacto -->
+        <section id="contacto" class="mt-8">
+            <h2 class="text-2xl font-bold">Contáctanos</h2>
+            <p class="text-gray-700">Si tienes alguna duda o necesitas ayuda, ¡escríbenos!</p>
+        </section>
     </main>
-    
-    <footer class="bg-blue-600 text-white p-4 text-center">
-        &copy; 2024 Tienda Deportiva Esquina Libertad
+
+    <!-- Footer -->
+    <footer class="bg-blue-600 text-white text-center p-4 mt-8">
+        <p>&copy; 2024 Tienda Deportiva Esquina Libertad. Todos los derechos reservados.</p>
     </footer>
+
+    <!-- Script -->
+    <script src="js/main.js"></script>
 </body>
 </html>
