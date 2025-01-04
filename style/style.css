@@ -1,4 +1,5 @@
-/* Reseteo básico */
+
+
 * {
     margin: 0;
     padding: 0;
@@ -12,7 +13,7 @@ body {
     line-height: 1.6;
 }
 
-/* Estilos del encabezado */
+
 header {
     background-color: #0047ab;
     color: #fff;
@@ -22,21 +23,20 @@ header {
     font-weight: bold;
 }
 
-/* Contenedor principal */
+
 main {
     max-width: 1200px;
     margin: 2rem auto;
     padding: 0 1rem;
 }
 
-/* Productos (grid) */
+
 #product-list {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 2rem;
 }
 
-/* Tarjetas de producto */
 #product-list div {
     background-color: #fff;
     border: 1px solid #ddd;
@@ -83,7 +83,7 @@ main {
     background-color: #003580;
 }
 
-/* Estilo del carrito */
+
 #cart {
     background-color: #fff;
     border: 1px solid #ddd;
@@ -112,7 +112,7 @@ main {
     border-bottom: 1px solid #eee;
 }
 
-/* Footer */
+
 footer {
     background-color: #333;
     color: #fff;
@@ -121,3 +121,41 @@ footer {
     margin-top: 2rem;
 }
 
+
+body {
+    font-family: Arial, sans-serif;
+  }
+  
+  form {
+    width: 50%;
+    margin: 0 auto;
+  }
+  
+  button {
+    display: block;
+    margin: 10px auto;
+    padding: 10px 20px;
+  }
+
+  @media (max-width: 768px) {
+    form {
+      width: 70%;
+    }
+  
+    button {
+      padding: 8px 16px;
+    }
+  }
+  
+
+  @media (max-width: 480px) {
+    form {
+      width: 90%;
+    }
+  
+    button {
+      padding: 6px 12px;
+      font-size: 14px;
+    }
+  }
+  
